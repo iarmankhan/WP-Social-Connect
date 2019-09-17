@@ -10,7 +10,24 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-social-connect
  */
-
+if (!defined('WPSOCCON_PLUGIN_NAME')) {
+  define('WPSOCCON_PLUGIN_NAME', 'WP Social Connect');
+}
+if (!defined('WPSOCCON_PLUGIN_VERSION')) {
+  define('WPSOCCON_PLUGIN_VERSION', '1.0.0');
+}
+if (!defined('WPSOCCON_PLUGIN_FILE')) {
+  define('WPSOCCON_PLUGIN_FILE', __FILE__);
+}
+if (!defined('WPSOCCON_PLUGIN_DIR')) {
+  define('WPSOCCON_PLUGIN_DIR', __DIR__ . DIRECTORY_SEPARATOR);
+}
+if (!defined('WPSOCCON_DOMAIN')) {
+  define('WPSOCCON_DOMAIN', 'wpsoccon');
+}
+if (!defined('WPSOCCON_DEMO_URL')) {
+  define('WPSOCCON_DEMO_URL', 'https://zypacinfotech.com/wp/whatsapp');
+}
 if (!class_exists('WPSOCCON')) {
 
     class WPSOCCON {
@@ -18,7 +35,6 @@ if (!class_exists('WPSOCCON')) {
       protected static $instance;
   
       function includes() {
-        include_once('includes/defaults.php');
         include_once('includes/frontend.php');
         include_once('includes/settings.php');
       }
